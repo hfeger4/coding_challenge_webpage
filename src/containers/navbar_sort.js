@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+// import { selectTop } from '../actions/index';
 
 class NavBarSort extends Component{
   constructor(props){
@@ -13,10 +16,14 @@ class NavBarSort extends Component{
             <h2>Newest Contractors in Santa Clara, CA</h2>
             <div className="search-details">&nbsp;(2 Results)</div>
           </div>
-          <div>
-            <button className="sort-button">
-            <i class="fas fa-sort-amount-down">
-            </i>&nbsp;Sort By (Best Match)</button>
+          <div className="dropdown-position">
+          <div class="dropdown">
+            <button class="dropbtn"><i class="fas fa-sort-amount-down"></i>&nbsp;Sort By (Best Match)</button>
+            <div class="dropdown-content">
+              <a href="#">Top Rated</a>
+              <a href="#">View Count</a>
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -24,4 +31,14 @@ class NavBarSort extends Component{
   }
 }
 
-export default NavBarSort;
+function mapStateToProps(state){
+  return{
+    profiles: state.profiles
+  };
+}
+
+// function mapDispatchToProps(dispatch){
+//   return bindActionCreators({selectTop}, dispatch);
+// }
+
+export default connect(mapStateToProps)(NavBarSort);
