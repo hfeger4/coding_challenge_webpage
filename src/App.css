@@ -85,3 +85,62 @@
   color: white;
   padding: 10px 15px;
 }
+
+.container-navbar{
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-sort{
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
+
+.contractor-location{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 1.9em;
+  padding: 10px;
+}
+
+.search-details{
+  color: #f0ad4e;
+  font-style: italic;
+  font-weight: 600;
+  font-size: .8em;
+}
+
+.sort-button{
+  margin-left: 20px;
+  color: #333;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: .25em;
+  width: 204px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1200px){
+  .navbar-sort{
+    width: 1170px;
+  }
+}
+@media screen and (min-width: 992px){
+  .navbar-sort{
+    width: 970px;
+  }
+}
+@media screen and (min-width: 768px){
+  .navbar-sort{
+    width: 750px;
+  }
+  h2{
+    line-height: .8em;
+  }
+}
