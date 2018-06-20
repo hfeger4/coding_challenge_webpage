@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/header';
 import NavBar from './containers/navbar';
 import NavBarSort from './containers/navbar_sort';
+import Profiles from './containers/profiles';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <Header />
         <NavBar/>
         <NavBarSort/>
+        <Profiles/>
       </div>
     );
   }
