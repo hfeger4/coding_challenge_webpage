@@ -45,6 +45,23 @@
     font-weight: 600;
 }
 
+.dropdown-btn{
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  color: #333;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: .25em;
+  width: 204px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;

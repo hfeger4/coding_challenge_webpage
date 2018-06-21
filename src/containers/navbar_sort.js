@@ -16,11 +16,11 @@ class NavBarSort extends Component{
             <div className="search-details">&nbsp;(2 Results)</div>
           </div>
           <div className="dropdown-position">
-          <div class="dropdown">
-            <button class="dropbtn"><i class="fas fa-sort-amount-down"></i>&nbsp;Sort By (Best Match)</button>
-            <div class="dropdown-content">
-              <button onClick={()=>this.props.selectTop(this.props.profiles)}>Top Rated</button>
-              <button onClick={()=>this.props.selectViews(this.props.profiles)}>View Count</button>
+          <div className="dropdown">
+            <button className="dropbtn"><i className="fas fa-sort-amount-down"></i>&nbsp;Sort By (Best Match)</button>
+            <div className="dropdown-content">
+              <button className="dropdown-btn" onClick={()=>this.props.selectTop(this.props.profiles)}>Top Rated</button>
+              <button className="dropdown-btn" onClick={()=>this.props.selectViews(this.props.profiles)}>View Count</button>
             </div>
           </div>
           </div>
