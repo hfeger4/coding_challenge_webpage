@@ -3,10 +3,10 @@ export const SELECT_VIEWS = 'SELECT_VIEWS';
 
 export const selectTop = profiles => ({
   type: SELECT_TOP,
-  profiles
+  payload: profiles
 });
 
 export const selectViews = profiles => ({
   type: SELECT_VIEWS,
-  profiles
+  payload: profiles
 });
