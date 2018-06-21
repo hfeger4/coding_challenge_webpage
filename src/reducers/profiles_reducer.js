@@ -72,13 +72,11 @@ const defaultState = [{
 const ProfilesReducer = (state = defaultState, action) => {
   switch(action.type){
     case 'SELECT_TOP':
-      console.log("UPDATING TOPS", action);
-      let profiles = action.profiles.sort((a, b) => parseFloat(a.averageRating) - parseFloat(b.averageRating));
+      let profiles = action.profiles.sort((a, b) => parseFloat(a.averageRating) - parseFloat(b.averageRating)).reverse();
       // const profiles = action.profiles.reverse();
       return Object.assign([],state,profiles);
     case 'SELECT_VIEWS':
-      console.log("UPDATING VIEWS", action);
-      let view_profiles = action.payload.sort((a,b) => parseFloat(a.totalReviews) - parseFloat(b.totalReviews));
+      let view_profiles = action.payload.sort((a,b) => parseFloat(a.totalReviews) - parseFloat(b.totalReviews)).reverse();
       return Object.assign([],state,view_profiles);
     default:
       return state;

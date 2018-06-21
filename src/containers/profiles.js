@@ -54,7 +54,6 @@ class Profiles extends Component{
     );
   }
   render(){
-    console.log(this.props.profiles);
     return(
       <div className="profiles">
         <ul className="profile-list">
