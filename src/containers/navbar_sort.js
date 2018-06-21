@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import { selectTop } from '.././actions/index';
 
 class NavBarSort extends Component{
   constructor(props){
@@ -50,9 +49,10 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch){
-  return(
-    bindActionCreators({selectTop},dispatch)
-  );
+  return{
+    selectTop : bindActionCreators(selectViews,dispatch),
+    selectViews: bindActionCreators(selectTop,dispatch)
+  };
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(NavBarSort);

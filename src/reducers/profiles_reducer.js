@@ -70,7 +70,6 @@ const defaultState = [{
 }];
 
 const ProfilesReducer = (state = defaultState, action) => {
-  // Object.freeze(state);
   switch(action.type){
     case 'SELECT_TOP':
       console.log("UPDATING TOPS", action);
