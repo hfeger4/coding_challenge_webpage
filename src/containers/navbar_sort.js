@@ -9,7 +9,6 @@ class NavBarSort extends Component{
   }
 
   render(){
-    console.log(this.props);
     return(
       <div className="container-navbar">
         <div className="navbar-sort">
@@ -22,7 +21,7 @@ class NavBarSort extends Component{
             <button class="dropbtn"><i class="fas fa-sort-amount-down"></i>&nbsp;Sort By (Best Match)</button>
             <div class="dropdown-content">
               <button onClick={()=>this.props.selectTop(this.props.profiles)}>Top Rated</button>
-              <a href="#">View Count</a>
+              <button onClick={()=>this.props.selectViews(this.props.profiles)}>View Count</button>
             </div>
           </div>
           </div>
@@ -39,6 +38,11 @@ const selectTop = profiles => ({
   profiles
 });
 
+export const selectViews = profiles => ({
+  type: 'SELECT_VIEWS',
+  payload: profiles
+});
+
 function mapStateToProps(state){
   return{
     profiles: state.profiles
@@ -46,7 +50,9 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({selectTop}, dispatch);
+  return(
+    bindActionCreators({selectTop},dispatch)
+  );
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(NavBarSort);

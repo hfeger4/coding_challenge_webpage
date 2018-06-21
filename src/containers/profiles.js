@@ -5,6 +5,10 @@ import { bindActionCreators } from 'redux';
 class Profiles extends Component{
   constructor(props){
     super(props);
+    this.renderList = this.renderList.bind(this);
+  }
+  componentWillUpdate(){
+    this.renderList();
   }
   renderList(){
     return this.props.profiles.map((profile) =>{
@@ -63,7 +67,9 @@ class Profiles extends Component{
 
 function mapStateToProps(state){
   return{
-    profiles: state.profiles
+    profiles: state.profiles,
+    topProfiles: state.topProfiles,
+    viewProfiles: state.viewProfiles
   };
 }
 
