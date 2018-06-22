@@ -73,7 +73,6 @@ const ProfilesReducer = (state = defaultState, action) => {
   switch(action.type){
     case 'SELECT_TOP':
       let profiles = action.profiles.sort((a, b) => parseFloat(a.averageRating) - parseFloat(b.averageRating)).reverse();
-      // const profiles = action.profiles.reverse();
       return Object.assign([],state,profiles);
     case 'SELECT_VIEWS':
       let view_profiles = action.payload.sort((a,b) => parseFloat(a.views.length) - parseFloat(b.views.length));
