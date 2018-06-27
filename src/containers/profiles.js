@@ -66,9 +66,7 @@ class Profiles extends Component{
 
 function mapStateToProps(state){
   return{
-    profiles: state.profiles,
-    topProfiles: state.topProfiles,
-    viewProfiles: state.viewProfiles
+    profiles: state.profiles
   };
 }
 
